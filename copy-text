@@ -1,0 +1,2 @@
+
+copyTxet(val) {      const temps = document.createElement('textarea')      temps.value = val      document.body.appendChild(temps)      temps.select() // 选择对象      document.execCommand('Copy') // 执行浏览器复制命令      temps.style.display = 'none'      document.body.removeChild(temps)      this.$message({        type: 'success',        message: '复制成功'      })    }
